@@ -33,12 +33,11 @@ db.collection('Users').orderBy('ClientID').onSnapshot(snapshot => {
         console.log(change.doc.data());
         if(change.type == 'added'){
             renderUsers(change.doc);
-            conlole.log(db.data)
+            console.log(db.data);
         } 
     });
 });
 
-renderUsers(db.doc);
 
 // updating records (console demo)
 // db.collection('cafes').doc('DOgwUvtEQbjZohQNIeMr').update({
